@@ -42,6 +42,11 @@ int main()
 					wait(status); /*waits for child to run command */
 				}
 			}
+			else /* command_path = NULL, executable not found */
+			{
+				/*ERROR for no file or directory for command */
+				printf("No such file or directory");
+			}
 		}
 		else /*getline failed */
 		{
