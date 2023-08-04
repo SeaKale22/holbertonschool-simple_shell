@@ -23,11 +23,11 @@ int main()
 		if (read != -1) /* getline successful */
 		{
 			/* removes newline from command */
-			if command[read - 1] == '\n'
+			if (command[read - 1] == '\n')
 				command[read - 1] = '\0';
 			/* check if command is valid and return path to executable */
 			command_path = valid_command(command);
-			if (command_path =! NULL)
+			if (command_path != NULL)
 			{
 				pid = fork();
 				if (pid < 0) /* error in forking */
