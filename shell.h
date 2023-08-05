@@ -10,6 +10,14 @@
 #include <sys/stat.h>
 #include <errno.h>
 
+
+typedef struct Node {
+	char *data;
+	struct Node *next;
+} Node;
+
 char *valid_command(const char *command);
+Node *append_argument(Node *head, const char *argument);
+void free_arguments(Node *head);
 
 #endif
