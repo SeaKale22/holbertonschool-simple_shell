@@ -22,9 +22,7 @@ int main()
 
 	while (active)
 	{
-		/* prompt for command if interactive */
-		if (isatty(STDIN_FILENO) != 0)
-			printf("($) ");
+		printf("($) ");
 		read = getline(&command, &len, stdin);	/*gets input and stores in buffer 'command' */
 		if (read != -1) /* getline successful */
 		{
