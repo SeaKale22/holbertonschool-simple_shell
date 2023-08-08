@@ -22,7 +22,6 @@ int main()
 
 	while (active)
 	{
-		printf("($) ");
 		read = getline(&command, &len, stdin);	/*gets input and stores in buffer 'command' */
 		if (read != -1) /* getline successful */
 		{
