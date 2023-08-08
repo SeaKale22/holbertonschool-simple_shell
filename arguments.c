@@ -8,7 +8,10 @@
  */
 Node *append_argument(Node *head, const char *argument)
 {
-	Node *new_node = (Node *)malloc(sizeof(Node));
+	Node *new_node;
+	Node *current;
+
+	new_node = (Node *)malloc(sizeof(Node));
 	if (!new_node)
 	{
 		perror("malloc for arguments");
@@ -20,7 +23,7 @@ Node *append_argument(Node *head, const char *argument)
 	{
 		return (new_node);
 	}
-	Node *current = head;
+	current = head;
 	while (current->next)
 	{
 		current = current->next;
